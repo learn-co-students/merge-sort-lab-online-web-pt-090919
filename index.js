@@ -5,18 +5,18 @@ function findMinAndRemoveSorted(array) {
 }
 
 // #merge should merge two sorted arrays to produce one sorted array:
-function merge(firstSubarray, secondSubArray) {
+function merge(firstSubArray, secondSubArray) {
   let sorted = []
-  while (firstSubarray.length != 0 && secondSubArray.length != 0) {
-    let minfirstHalf = firstSubarray[0];
+  while (firstSubArray.length != 0 && secondSubArray.length != 0) {
+    let minfirstHalf = firstSubArray[0];
     let minsecondHalf = secondSubArray[0];
     if (minfirstHalf < minsecondHalf) {
-      sorted.push(findMinAndRemoveSorted(firstSubarray))
+      sorted.push(findMinAndRemoveSorted(firstSubArray))
     } else {
       sorted.push(findMinAndRemoveSorted(secondSubArray))
     }
   }
-  return sorted.concat(firstSubarray).concat(secondSubArray)
+  return sorted.concat(firstSubArray).concat(secondSubArray)
 }
 
 // #mergeSort should sort an unsorted array:
